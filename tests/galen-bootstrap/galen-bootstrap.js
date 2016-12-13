@@ -55,7 +55,8 @@ function openDriverForDevice(device, url) {
     if (fullUrl !== null) {
         session.report().info("Open " + fullUrl);
     }
-    var driver = device.initDriver(fullUrl);
+    var driver = createDriver(fullUrl,
+                            "1280x800","chrome");
     return driver;
 }
 

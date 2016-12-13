@@ -2,16 +2,20 @@ load("init.js");
 load("pages/LoginPage.js");
 
 
-testOnAllDevices("Login page", "/", function (driver, device) {
+
+
+
+
+
+testOnAllDevices("Login page", "/", function (device,driver) {
+
 
     var loginPage = null;
 
     logged("Basic layout check", function () {
         var welcomePage = new WelcomePage(driver).waitForIt();
         welcomePage.loginButton.click();
-
         loginPage = new LoginPage(driver).waitForIt();
-
         checkLayout(driver, "specs/loginPage.gspec", device.tags);
     });
 
@@ -24,3 +28,5 @@ testOnAllDevices("Login page", "/", function (driver, device) {
     });
 
 });
+
+

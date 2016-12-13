@@ -1,1 +1,1 @@
-galen test tests/ --htmlreport reports
+galen test tests/ -Dwebdriver.chrome.driver=chromedriver --htmlreport reports
